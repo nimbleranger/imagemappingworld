@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Interactive World Map</title>
+    <title>Interactive World Map with Legend</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,13 +10,37 @@
             padding: 20px;
             background-color: #f4f4f4;
             color: #333;
-            text-align: center;
+            display: flex;
+            align-items: flex-start;
         }
-        h1 {
-            color: #00796b;
+        .sidebar {
+            width: 200px;
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 8px;
         }
-        .image-container {
-            margin-top: 20px;
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .map-container {
+            flex: 1;
         }
         img {
             max-width: 100%;
@@ -36,34 +60,38 @@
     </style>
 </head>
 <body>
-    <h1>Explore the Continents and Oceans</h1>
-    <div class="image-container">
-        <img src="image1.jpg" usemap="#worldmap" alt="World Map of Continents and Oceans">
-        <map name="worldmap">
-            <!-- North America -->
-            <area shape="poly" coords="120,70,200,60,260,150,210,170,130,120" href="https://www.nationalgeographic.com/north-america/" alt="North America" title="North America">
-            <!-- South America -->
-            <area shape="poly" coords="230,250,270,240,290,300,250,350,210,310" href="https://www.nationalgeographic.com/south-america/" alt="South America" title="South America">
-            <!-- Europe -->
-            <area shape="poly" coords="420,80,480,90,500,130,460,150,420,120" href="https://www.lonelyplanet.com/europe" alt="Europe" title="Europe">
-            <!-- Asia -->
-            <area shape="poly" coords="500,70,600,100,620,150,580,200,500,150" href="https://www.lonelyplanet.com/asia" alt="Asia" title="Asia">
-            <!-- Australia -->
-            <area shape="poly" coords="620,320,670,340,680,380,630,370,610,340" href="https://www.nationalgeographic.com/australia-oceania/" alt="Australia" title="Australia">
-            <!-- Africa -->
-            <area shape="poly" coords="400,200,450,220,430,300,370,270,380,220" href="https://www.nationalgeographic.com/africa/" alt="Africa" title="Africa">
-            <!-- Antarctica -->
-            <area shape="poly" coords="300,400,500,400,550,450,250,450" href="https://www.antarctica.gov.au/" alt="Antarctica" title="Antarctica">
-            <!-- Pacific Ocean -->
-            <area shape="poly" coords="50,150,150,200,100,300,30,250" href="https://www.nationalgeographic.com/environment/oceans/pacific-ocean/" alt="Pacific Ocean" title="Pacific Ocean">
-            <!-- Atlantic Ocean -->
-            <area shape="poly" coords="250,150,350,200,300,300,200,250" href="https://www.nationalgeographic.com/environment/oceans/atlantic-ocean/" alt="Atlantic Ocean" title="Atlantic Ocean">
-            <!-- Indian Ocean -->
-            <area shape="poly" coords="450,300,550,320,530,370,450,350" href="https://www.nationalgeographic.com/environment/oceans/indian-ocean/" alt="Indian Ocean" title="Indian Ocean">
-        </map>
+    <div class="sidebar">
+        <h2>Clickable Regions</h2>
+        <ul>
+            <li><a href="#">North America</a></li>
+            <li><a href="#">South America</a></li>
+            <li><a href="#">Africa</a></li>
+            <li><a href="#">Europe</a></li>
+            <li><a href="#">Asia</a></li>
+            <li><a href="#">Oceania</a></li>
+            <li><a href="#">Antarctica</a></li>
+            <li><a href="#">South Pacific Ocean</a></li>
+            <li><a href="#">Indian Ocean</a></li>
+            <li><a href="#">North Atlantic Ocean</a></li>
+        </ul>
     </div>
-    <div class="credits">
-        <p>Image source: <a href="https://www.worldatlas.com/continents" target="_blank">WorldAtlas</a></p>
+    <div class="map-container">
+        <img src="image1.jpg" usemap="#image-map" alt="World Map">
+        <map name="image-map">
+            <area target="" alt="North America" title="North America" href="https://www.nationalgeographic.com/north-america/" coords="272,56,529,328" shape="rect">
+            <area target="" alt="South America" title="South America" href="https://www.nationalgeographic.com/south-america/" coords="563,655,392,352" shape="rect">
+            <area target="" alt="Africa" title="Africa" href="https://www.nationalgeographic.com/africa/" coords="698,233,936,540,839,383,810,380,861,417,830,410,834,459,851,510,857,479,839,486,854,442,890,453,887,421,890,409,881,399,873,389,867,372,930,387,898,387,910,405" shape="poly">
+            <area target="" alt="Europe" title="Europe" href="https://www.lonelyplanet.com/europe" coords="941,197,751,83" shape="rect">
+            <area target="" alt="Asia" title="Asia" href="https://www.lonelyplanet.com/asia" coords="967,53,1303,308" shape="rect">
+            <area target="" alt="Oceania" title="Oceania" href="https://www.nationalgeographic.com/australia-oceania/" coords="1212,446,1377,557" shape="rect">
+            <area target="" alt="Antarctica" title="Antarctica" href="https://www.antarctica.gov.au/" coords="335,699,1200,753" shape="rect">
+            <area target="" alt="South Pacific Ocean" title="South Pacific Ocean" href="https://www.nationalgeographic.com/environment/oceans/pacific-ocean/" coords="66,391,227,516" shape="rect">
+            <area target="" alt="Indian Ocean" title="Indian Ocean" href="https://www.nationalgeographic.com/environment/oceans/indian-ocean/" coords="973,339,1147,531" shape="rect">
+            <area target="" alt="North Atlantic Ocean" title="North Atlantic Ocean" href="https://www.nationalgeographic.com/environment/oceans/atlantic-ocean/" coords="559,75,692,405" shape="rect">
+        </map>
+        <div class="credits">
+            <p>Image source: <a href="https://www.worldatlas.com/continents" target="_blank">WorldAtlas</a></p>
+        </div>
     </div>
 </body>
 </html>
