@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive World Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #00796b;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .credits {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .credits a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        .credits a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore the Continents and Oceans</h1>
+    <div class="image-container">
+        <img src="image1.jpg" usemap="#worldmap" alt="World Map of Continents and Oceans">
+        <map name="worldmap">
+            <!-- North America -->
+            <area shape="poly" coords="120,70,200,60,260,150,210,170,130,120" href="https://www.nationalgeographic.com/north-america/" alt="North America" title="North America">
+            <!-- South America -->
+            <area shape="poly" coords="230,250,270,240,290,300,250,350,210,310" href="https://www.nationalgeographic.com/south-america/" alt="South America" title="South America">
+            <!-- Europe -->
+            <area shape="poly" coords="420,80,480,90,500,130,460,150,420,120" href="https://www.lonelyplanet.com/europe" alt="Europe" title="Europe">
+            <!-- Asia -->
+            <area shape="poly" coords="500,70,600,100,620,150,580,200,500,150" href="https://www.lonelyplanet.com/asia" alt="Asia" title="Asia">
+            <!-- Australia -->
+            <area shape="poly" coords="620,320,670,340,680,380,630,370,610,340" href="https://www.nationalgeographic.com/australia-oceania/" alt="Australia" title="Australia">
+            <!-- Africa -->
+            <area shape="poly" coords="400,200,450,220,430,300,370,270,380,220" href="https://www.nationalgeographic.com/africa/" alt="Africa" title="Africa">
+            <!-- Antarctica -->
+            <area shape="poly" coords="300,400,500,400,550,450,250,450" href="https://www.antarctica.gov.au/" alt="Antarctica" title="Antarctica">
+            <!-- Pacific Ocean -->
+            <area shape="poly" coords="50,150,150,200,100,300,30,250" href="https://www.nationalgeographic.com/environment/oceans/pacific-ocean/" alt="Pacific Ocean" title="Pacific Ocean">
+            <!-- Atlantic Ocean -->
+            <area shape="poly" coords="250,150,350,200,300,300,200,250" href="https://www.nationalgeographic.com/environment/oceans/atlantic-ocean/" alt="Atlantic Ocean" title="Atlantic Ocean">
+            <!-- Indian Ocean -->
+            <area shape="poly" coords="450,300,550,320,530,370,450,350" href="https://www.nationalgeographic.com/environment/oceans/indian-ocean/" alt="Indian Ocean" title="Indian Ocean">
+        </map>
+    </div>
+    <div class="credits">
+        <p>Image source: <a href="https://www.worldatlas.com/continents" target="_blank">WorldAtlas</a></p>
+    </div>
+</body>
+</html>
